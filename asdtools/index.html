@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASD Tools — Privacy Policy</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1c1c1e; --muted: #6e6e73; --accent: #c4480f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121214; --fg: #f2f2f7; --muted: #a1a1aa; --accent: #f68a4f; }
+  }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.9em; margin-bottom: 0.1em; }
+  h2 { font-size: 1.15em; margin-top: 2em; color: var(--accent); }
+  .date { color: var(--muted); margin-top: 0; }
+  li { margin: 0.3em 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>ASD Tools</h1>
+<p class="date">Privacy Policy · Effective October 7, 2026</p>
+
+<p>ASD Tools is the account administration app used by Antietam School District's IT staff. It lets an
+authorized administrator look up and manage staff and student accounts in the district's own Microsoft and
+Google systems. The short version: <strong>the developer never receives any data from the app</strong>.
+The app talks directly to the district's own services, as the signed-in administrator, and nothing else.</p>
+
+<h2>Who can use it</h2>
+<p>Only district staff whom Antietam School District IT has assigned to the app can sign in, using their district
+Microsoft account. There are no accounts or sign-ups run by the developer.</p>
+
+<h2>What the app uses</h2>
+<ul>
+  <li><strong>District directory information:</strong> staff and student account details from the district's
+      Microsoft Entra ID / Microsoft 365 tenant (via Microsoft Graph) and Google Workspace (via the Google
+      Admin SDK). Examples are names, email addresses, account status, groups, licenses, sign-in activity and
+      registered sign-in methods. The app reads these, and changes them, only with the signed-in administrator's
+      own permissions, and only when the administrator asks.</li>
+  <li><strong>Student password sheets:</strong> when an administrator resets a student password, the app may
+      record it on the district's own Google Sheet for that school.</li>
+  <li><strong>Door access (optional):</strong> if an administrator enters a Verkada API key, the app reads door
+      access events, profile photos and door camera stills from the district's Verkada system. This is
+      read-only.</li>
+  <li><strong>Roster files (optional):</strong> a roster CSV the administrator chooses to open is read on the
+      device to compare against the directory.</li>
+  <li><strong>Face ID / Touch ID:</strong> used to unlock the app. Apple handles this. The app only learns
+      whether unlocking succeeded and never sees biometric data.</li>
+</ul>
+
+<h2>Where it is stored</h2>
+<ul>
+  <li><strong>Sign-in tokens and the Verkada API key</strong> are kept in the device keychain.</li>
+  <li><strong>A list of account names and email addresses</strong> is saved on the device so name suggestions
+      appear quickly. It is protected by the device's encryption and deleted when you sign out.</li>
+  <li><strong>An audit log</strong> of the actions taken in the app (who, what, which account, result) is kept on
+      the device. It never contains passwords or access passes. It leaves the device only if the administrator
+      shares it.</li>
+  <li><strong>Report settings</strong> such as filters and thresholds are saved on the device.</li>
+  <li><strong>Exported reports</strong> are saved only where the administrator chooses to save them.</li>
+  <li>Everything else, including the directory itself, stays in the district's own Microsoft, Google and
+      Verkada systems and is governed by the district's agreements with those providers.</li>
+</ul>
+
+<h2>What the app does not do</h2>
+<ul>
+  <li>No servers run by the developer. Nothing is sent to the developer.</li>
+  <li>No analytics, crash reporting, advertising, tracking or third-party SDKs.</li>
+  <li>No selling, sharing or use of any data for marketing.</li>
+  <li>Passwords and Temporary Access Passes are shown once, hidden from screen recordings, and never written
+      to the audit log. When copied, they stay on this device and the clipboard clears itself.</li>
+</ul>
+
+<h2>Student records</h2>
+<p>Student information the app displays is education-record data that belongs to Antietam School District. The
+app is a tool for district staff to do their jobs, and it doesn't collect or keep that data for any other
+purpose. Questions about student records themselves should go to the district.</p>
+
+<h2>Your choices</h2>
+<ul>
+  <li>Sign out from the account menu. Signing out removes the sign-in tokens and the cached name list from the
+      device.</li>
+  <li>Remove the Verkada API key at any time from the door access settings in the app.</li>
+  <li>Deleting the app removes all of its data from the device, including the audit log.</li>
+  <li>District IT can revoke anyone's access by removing their assignment to the app in Microsoft Entra ID.</li>
+</ul>
+
+<h2>Changes and contact</h2>
+<p>If this policy changes, the new version will be posted on this page with a new effective date.
+Questions? <a href="https://github.com/tibble/privacy/issues">Open an issue</a> or send feedback through TestFlight.</p>
+</main>
+</body>
+</html>
