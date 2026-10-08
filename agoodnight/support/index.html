@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Good Night — Support</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1c1c1e; --muted: #6e6e73; --accent: #4b3fb5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e0d1a; --fg: #f2f2f7; --muted: #a1a1aa; --accent: #a99cff; }
+  }
+  body { background: var(--bg); color: var(--fg); margin: 0;
+         font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 1.9em; margin-bottom: 0.1em; }
+  h2 { font-size: 1.15em; margin-top: 2em; color: var(--accent); }
+  .date { color: var(--muted); margin-top: 0; }
+  li { margin: 0.3em 0; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>A Good Night</h1>
+<p class="date">Support</p>
+
+<p>A Good Night logs late food, drinks and caffeine and shows which of them go with worse
+sleep for you, using sleep data from Apple Health.</p>
+
+<p><strong>Questions or problems?</strong> <a href="https://github.com/tibble/privacy/issues">Open an issue</a>
+and it will be answered there. Issues are public, so please leave out health details you'd rather keep private.</p>
+
+<h2>Insights says "N more nights"</h2>
+<p>Comparisons need at least 7 nights with a habit and 7 clean nights (nothing late logged),
+all with sleep data. The fuller "Accounting for the others" view needs about 30 logged nights.</p>
+
+<h2>The Morning tab shows no sleep</h2>
+<p>The app reads sleep from Apple Health. Check that something records sleep there (an Apple Watch
+with Sleep tracking on, or another tracker), and that A Good Night may read Sleep in
+Settings ▸ Health ▸ Data Access &amp; Devices. The morning rating works without it.</p>
+
+<h2>My watch doesn't show what I logged on my iPhone</h2>
+<p>iPhone and Apple Watch stay in step through your iCloud account, which can take a few minutes.
+Both need to be signed in to the same iCloud account.</p>
+
+<h2>How do I get my data out, or delete it?</h2>
+<p>Settings ▸ Export as CSV saves everything you logged and each night's numbers. Deleting an entry
+(swipe it on Tonight or in a night's detail) deletes it everywhere. Deleting the app removes its data
+from that device; to remove the iCloud copy too, go to Settings ▸ your name ▸ iCloud ▸ Manage Storage.</p>
+
+<h2>Is this medical advice?</h2>
+<p>No. The app shows patterns in your own data. Talk to a doctor about ongoing sleep problems.</p>
+
+<p><a href="../">Privacy policy</a></p>
+</main>
+</body>
+</html>
