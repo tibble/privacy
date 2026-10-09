@@ -22,7 +22,7 @@
 <body>
 <main>
 <h1>ASD Tools</h1>
-<p class="date">Privacy Policy · Effective October 7, 2026</p>
+<p class="date">Privacy Policy · Effective October 9, 2026</p>
 
 <p>ASD Tools is the account administration app used by Antietam School District's IT staff. It lets an
 authorized administrator look up and manage staff and student accounts in the district's own Microsoft and
@@ -40,11 +40,15 @@ Microsoft account. There are no accounts or sign-ups run by the developer.</p>
       Admin SDK). Examples are names, email addresses, account status, groups, licenses, sign-in activity and
       registered sign-in methods. The app reads these, and changes them, only with the signed-in administrator's
       own permissions, and only when the administrator asks.</li>
+  <li><strong>Recent sign-ins:</strong> when an administrator opens Recent Sign-ins for one person, the app reads
+      that person's latest Microsoft sign-in log entries: time, result, app, device and browser, approximate
+      location and IP address.</li>
   <li><strong>Student password sheets:</strong> when an administrator resets a student password, the app may
       record it on the district's own Google Sheet for that school.</li>
   <li><strong>Door access (optional):</strong> if an administrator enters a Verkada API key, the app reads door
-      access events, profile photos and door camera stills from the district's Verkada system. This is
-      read-only.</li>
+      access events, profile photos and door camera stills from the district's Verkada system: the last door
+      access of the people listed in Inactive Users, the last door access of everyone in Verkada for the Door
+      Activity report, and one person's photo and camera still in Check User. This is read-only.</li>
   <li><strong>Roster files (optional):</strong> a roster CSV the administrator chooses to open is read on the
       device to compare against the directory.</li>
   <li><strong>Face ID / Touch ID:</strong> used to unlock the app. Apple handles this. The app only learns
@@ -61,6 +65,9 @@ Microsoft account. There are no accounts or sign-ups run by the developer.</p>
       shares it.</li>
   <li><strong>Report settings</strong> such as filters and thresholds are saved on the device.</li>
   <li><strong>Exported reports</strong> are saved only where the administrator chooses to save them.</li>
+  <li><strong>Sign-in log entries, door activity, profile photos and camera stills</strong> are kept only in
+      memory while the app is open. They are never saved to the device, and are discarded at sign-out.
+      Sign-in log entries are reused for at most five minutes, and older ones are dropped.</li>
   <li>Everything else, including the directory itself, stays in the district's own Microsoft, Google and
       Verkada systems and is governed by the district's agreements with those providers.</li>
 </ul>
